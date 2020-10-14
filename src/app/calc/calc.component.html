@@ -1,0 +1,14 @@
+<form>
+    <label for="input-value">Value for calculations: </label>
+    <input type="number" name="input-value" (keyup)="calculate($event)">
+</form>
+<table *ngIf="percentages.size">
+    <tr>
+        <th>Percentage</th>
+        <th>Value</th>
+    </tr>
+    <tr *ngFor="let percentage of percentages | keyvalue">
+        <td>{{percentage.key}}</td>
+        <td>{{percentage.value}}</td>
+    </tr>
+</table>
