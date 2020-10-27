@@ -5,8 +5,8 @@
         <span class="card-title">Weight Percentage Calculator</span>
         <div class="row">
           <form>
-            <label for="input-value">Value for calculations: </label>
-            <input type="number" name="input-value" (keyup)="calculate($event)">
+            <input type="number" name="weight" id="weight" (keyup)="calculate($event)">
+            <label for="weight">Value for calculations: </label>
           </form>
           <table *ngIf="percentages.size">
             <tr>
