@@ -1,14 +1,25 @@
-<form>
-    <label for="input-value">Value for calculations: </label>
-    <input type="number" name="input-value" (keyup)="calculate($event)">
-</form>
-<table *ngIf="percentages.size">
-    <tr>
-        <th>Percentage</th>
-        <th>Value</th>
-    </tr>
-    <tr *ngFor="let percentage of percentages | keyvalue">
-        <td>{{percentage.key}}</td>
-        <td>{{percentage.value}}</td>
-    </tr>
-</table>
+<div class="row">
+  <div class="col s12">
+    <div id="main" class="card">
+      <div class="card-content">
+        <span class="card-title">Weight Percentage Calculator</span>
+        <div class="row">
+          <form>
+            <input type="number" name="weight" id="weight" (keyup)="calculate($event)">
+            <label for="weight">Value for calculations: </label>
+          </form>
+          <table *ngIf="percentages.size">
+            <tr>
+              <th>Percentage</th>
+              <th>Value</th>
+            </tr>
+            <tr *ngFor="let percentage of percentages | keyvalue">
+              <td>{{percentage.key}}</td>
+              <td>{{percentage.value}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
