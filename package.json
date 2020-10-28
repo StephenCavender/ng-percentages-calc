@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev": "lite-server",
+    "dev": "lite-server --baseDir=dist/percentages-calc",
     "deploy": "ng deploy --base-href=/ng-percentages-calc/"
   },
   "private": true,
